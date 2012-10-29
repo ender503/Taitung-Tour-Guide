@@ -1,0 +1,53 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Tourguide._197Road"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot 包含放置所有其他頁面的根資料格-->
+    <Grid x:Name="LayoutRoot">
+        <controls:Panorama Title="197縣道">
+
+            <!--Panorama 項目 1-->
+            <controls:PanoramaItem Header="景點介紹">
+                <Grid>
+                    <ScrollViewer Height="492" HorizontalAlignment="Left" Margin="-12,6,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="433">
+                        <TextBlock Height="600" Name="textBlock1" Text="       197縣道是台東和池上之間的縣道，全長共計60.2公里，此道路有「台灣紐西蘭」之稱，沿途都有美麗的風景，由於坡度緩和和車輛稀少的緣故，十分受到單車族的歡迎。沿途可以看到台東市區、志航基地、利吉惡地、台東機場等，是屬於中等難度的單車路線。值得注意的是，在23K到37K之間，是一段碎石子路面，只適合登山車車友騎乘，公路車請務必避開。" Width="432" TextWrapping="Wrap" FontSize="30" />
+                    </ScrollViewer>
+                </Grid>
+            </controls:PanoramaItem>
+
+            <!--Panorama 項目 2-->
+            <controls:PanoramaItem Header="景點照片">
+                <Grid>
+                    <Image Height="117" HorizontalAlignment="Left" Margin="40,39,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="139" Source="/Tourguide;component/Images/197入口.jpg" ManipulationStarted="textBlock2_ManipulationStarted" />
+                    <Image Height="117" HorizontalAlignment="Left" Margin="223,39,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="139" Source="/Tourguide;component/Images/197-1.jpg" ManipulationStarted="textBlock3_ManipulationStarted" />
+                    <Image Height="117" HorizontalAlignment="Left" Margin="42,188,0,0" Name="image3" Stretch="Fill" VerticalAlignment="Top" Width="139" Source="/Tourguide;component/Images/1972.jpg" ManipulationStarted="textBlock4_ManipulationStarted" />
+                    <Image Height="117" HorizontalAlignment="Left" Margin="224,188,0,0" Name="image4" Stretch="Fill" VerticalAlignment="Top" Width="139" Source="/Tourguide;component/Images/1973.jpg" ManipulationStarted="textBlock5_ManipulationStarted" />
+                    <TextBlock Height="17" HorizontalAlignment="Left" Margin="93,92,0,0" Name="textBlock2" Text="TextBlock" VerticalAlignment="Top" Width="36" Visibility="Collapsed" ManipulationStarted="textBlock2_ManipulationStarted" />
+                    <TextBlock Height="20" HorizontalAlignment="Left" Margin="271,93,0,0" Name="textBlock3" Text="TextBlock" VerticalAlignment="Top" Width="37" ManipulationStarted="textBlock3_ManipulationStarted" Visibility="Collapsed" />
+                    <TextBlock Height="0" HorizontalAlignment="Left" Margin="108,251,0,0" Name="textBlock4" Text="TextBlock" VerticalAlignment="Top" Width="33" Visibility="Collapsed" ManipulationStarted="textBlock4_ManipulationStarted" />
+                    <TextBlock Height="17" HorizontalAlignment="Left" Margin="283,245,0,0" Name="textBlock5" Text="TextBlock" VerticalAlignment="Top" Width="24" ManipulationStarted="textBlock5_ManipulationStarted" Visibility="Collapsed" />
+                </Grid>
+            </controls:PanoramaItem>
+
+            <!--Panorama 項目 3-->
+            <controls:PanoramaItem Header="路徑導引">
+                <Grid/>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+    </Grid>
+
+    <!--Panorama 應用程式不應該顯示 ApplicationBar-->
+
+</phone:PhoneApplicationPage>

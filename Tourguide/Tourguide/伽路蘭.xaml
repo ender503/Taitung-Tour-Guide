@@ -1,0 +1,51 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Tourguide.伽路蘭"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+    <!--LayoutRoot 包含放置所有其他頁面的根資料格-->
+    <Grid x:Name="LayoutRoot">
+        <controls:Panorama Title="伽路蘭" Background="{x:Null}">
+            <!--Panorama 項目 1-->
+            <controls:PanoramaItem Header="景點介紹">
+                <Grid>
+                    <ScrollViewer Height="494" HorizontalAlignment="Left" Margin="5,4,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="410">
+                        <TextBlock Height="907" Name="textBlock3" Text="       伽路蘭遊憩區以地層翻轉著稱，位於省道台11線157.7公里處，也就是在著名的小野柳風景區北側，面積3.2公頃，原為空軍建設志航基地機 場時的廢棄土置場，經東海岸國家風景區管理處廢物利用作為苗圃，經過多次規劃整理後，以生態工法開發，逐漸發展成為相當受到歡迎的遊憩區，成為東海岸必遊的景點之一。伽路蘭鄰近小野柳風景區，延續綺麗的山海之美，自然景觀秀麗，腹地廣大草地柔軟，且沒有視覺障礙，白天視野遼闊，風光壯麗，可以欣賞從小野柳、都蘭灣一直 到都蘭鼻的海岸景觀，仰望台東最迷人的都蘭山，傍晚彩霞滿天，海風送爽，晚上更因沒有光害，成為觀星、賞月、聽濤的好去處。" TextWrapping="Wrap" FontSize="30" />
+                    </ScrollViewer>
+                </Grid>
+            </controls:PanoramaItem>
+
+            <!--Panorama 項目 2-->
+            <controls:PanoramaItem Header="景點照片">
+                <controls:PanoramaItem.Background>
+                    <ImageBrush Stretch="Uniform" />
+                </controls:PanoramaItem.Background>
+                <Grid>
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="64,443,0,0" Name="textBlock1" Text="TextBlock" VerticalAlignment="Top" ManipulationStarted="textBlock1_ManipulationStarted" Visibility="Collapsed" />
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="239,441,0,0" Name="textBlock2" Text="TextBlock" VerticalAlignment="Top" ManipulationStarted="textBlock2_ManipulationStarted" Visibility="Collapsed" />
+                    <Image Height="131" HorizontalAlignment="Left" Margin="30,41,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="159" Source="/Tourguide;component/Images/伽路蘭海岸.jpg" ManipulationStarted="textBlock1_ManipulationStarted" />
+                    <Image Height="131" HorizontalAlignment="Left" Margin="226,41,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="159" Source="/Tourguide;component/Images/伽路蘭1.jpg" ManipulationStarted="textBlock2_ManipulationStarted" />
+                </Grid>
+            </controls:PanoramaItem>
+
+            <!--Panorama 項目 3-->
+            <controls:PanoramaItem Header="路徑導引">
+                <Grid/>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+    </Grid>
+
+    <!--Panorama 應用程式不應該顯示 ApplicationBar-->
+
+</phone:PhoneApplicationPage>

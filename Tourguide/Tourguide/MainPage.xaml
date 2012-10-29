@@ -1,0 +1,72 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Tourguide.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" d:DesignHeight="768" d:DesignWidth="480">
+
+    <!--LayoutRoot 是放置所有頁面的根資料格-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel 包含應用程式的名稱和頁面標題-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="Taitung Tourguide" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="選擇景點" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - 其他內容置於此-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.Background>
+                <ImageBrush />
+            </Grid.Background>
+        </Grid> 
+        <Image Height="90" HorizontalAlignment="Left" Margin="48,653,0,0" Name="image8" Stretch="Fill" VerticalAlignment="Top" Width="90" Source="/Tourguide;component/Images/小野柳.jpg" Grid.Row="1" />
+        <ScrollViewer Height="601" HorizontalAlignment="Left" Margin="0,6,0,0" Name="scrollViewer1" VerticalAlignment="Top" Width="444" Grid.Row="1">
+            <Grid Height="1280" Name="grid1" Width="447">
+                <Image Height="90" HorizontalAlignment="Left" Margin="31,57,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="90" Source="/Tourguide;component/Images/活水湖.jpg" ManipulationStarted="textBlock1_ManipulationStarted" />
+                <TextBlock Height="51" HorizontalAlignment="Left" Margin="169,57,0,0" Name="textBlock1" Text="台東森林公園" VerticalAlignment="Top" Width="217" FontSize="35" ManipulationStarted="textBlock1_ManipulationStarted" />
+                <Image Height="90" HorizontalAlignment="Left" Margin="31,187,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="90" Source="/Tourguide;component/Images/寶桑亭.jpg" ManipulationStarted="textBlock2_ManipulationStarted" />
+                <TextBlock Height="47" HorizontalAlignment="Left" Margin="169,187,0,0" Name="textBlock2" Text="台東海濱公園" VerticalAlignment="Top" Width="217" FontSize="35" ManipulationStarted="textBlock2_ManipulationStarted" />
+                <Image Height="90" HorizontalAlignment="Left" Margin="31,318,0,0" Name="image3" Stretch="Fill" VerticalAlignment="Top" Width="90" Source="/Tourguide;component/Images/關山清水公園.jpg" ManipulationStarted="textBlock3_ManipulationStarted" />
+                <TextBlock Height="50" HorizontalAlignment="Left" Margin="169,318,0,0" Name="textBlock3" Text="關山親水公園" VerticalAlignment="Top" Width="217" FontSize="35" ManipulationStarted="textBlock3_ManipulationStarted" />
+                <Image Height="90" HorizontalAlignment="Left" Margin="31,449,0,0" Name="image4" Stretch="Fill" VerticalAlignment="Top" Width="90" Source="/Tourguide;component/Images/197-1.jpg" ManipulationStarted="textBlock4_ManipulationStarted" />
+                <TextBlock Height="50" HorizontalAlignment="Left" Margin="169,449,0,0" Name="textBlock4" Text="197縣道" VerticalAlignment="Top" Width="133" FontSize="35" ManipulationStarted="textBlock4_ManipulationStarted" />
+                <Image Height="91" HorizontalAlignment="Left" Margin="31,580,0,0" Name="image5" Stretch="Fill" VerticalAlignment="Top" Width="90" Source="/Tourguide;component/Images/台東史前博物館.jpg" ManipulationStarted="textBlock5_ManipulationStarted" />
+                <TextBlock Height="50" HorizontalAlignment="Left" Margin="169,580,0,0" Name="textBlock5" Text="台東史前文化博物館" VerticalAlignment="Top" Width="258" FontSize="28" ManipulationStarted="textBlock5_ManipulationStarted" />
+                <Image Height="90" HorizontalAlignment="Left" Margin="31,711,0,0" Name="image6" Stretch="Fill" VerticalAlignment="Top" Width="90" Source="/Tourguide;component/Images/伽路蘭海岸.jpg" ManipulationStarted="textBlock6_ManipulationStarted" />
+                <TextBlock Height="50" HorizontalAlignment="Left" Margin="169,711,0,0" Name="textBlock6" Text="伽路蘭" VerticalAlignment="Top" Width="217" FontSize="35" ManipulationStarted="textBlock6_ManipulationStarted" />
+                <Image Height="90" HorizontalAlignment="Left" Margin="31,841,0,0" Name="image7" Stretch="Fill" VerticalAlignment="Top" Width="90" Source="/Tourguide;component/Images/三仙台.jpg" ManipulationStarted="textBlock7_ManipulationStarted" />
+                <TextBlock Height="50" HorizontalAlignment="Left" Margin="169,841,0,0" Name="textBlock7" Text="三仙台" VerticalAlignment="Top" Width="217" FontSize="35" ManipulationStarted="textBlock7_ManipulationStarted" />
+                <Image Height="90" HorizontalAlignment="Left" Margin="31,972,0,0" Name="image9" Stretch="Fill" VerticalAlignment="Top" Width="90" Source="/Tourguide;component/Images/小野柳1.jpg" ManipulationStarted="textBlock8_ManipulationStarted" />
+                <TextBlock Height="50" HorizontalAlignment="Left" Margin="169,972,0,0" Name="textBlock8" Text="小野柳" VerticalAlignment="Top" Width="217" FontSize="35" ManipulationStarted="textBlock8_ManipulationStarted" />
+            </Grid>
+        </ScrollViewer>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Tourguide;component/Images/寶桑亭.jpg" />
+        </Grid.Background>
+    </Grid>
+ 
+    <!--顯示 ApplicationBar 使用方式的程式碼範例-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="按鈕 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="按鈕 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="功能表項目 1"/>
+                <shell:ApplicationBarMenuItem Text="功能表項目 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
